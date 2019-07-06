@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
 .navbar{
@@ -15,6 +15,7 @@ body{
     width: 100%;
     height: 70px;
     z-index: 1;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
 .nav{
@@ -22,6 +23,7 @@ body{
     justify-content: right;
     list-style: none;
     margin-right: 15%;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
 .logo{
@@ -31,6 +33,7 @@ body{
     letter-spacing: 1px;
     font-weight: bold;
     font-size: 35px;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
 a{
@@ -38,20 +41,32 @@ a{
     color: #000;
     text-decoration: none;
     text-transform: uppercase;
+    font-family: 'Didact Gothic', sans-serif;
 }
 a:hover{
     color: #000;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
 .banner{
     position: relative;
-    background-image: url(1.jpg);
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
 }
+
+#austin{
+    position: relative;
+    filter: blur(8px);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
 .bio, .skills, .portfolio, .contact{
     position: relative;
     display: flex;
@@ -61,8 +76,10 @@ a:hover{
     flex-direction: row;
     width: 100%;
     height: 100vh;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
+/* text styling */
 .text{
     width: 65%;
     height: 80%;
@@ -70,7 +87,7 @@ a:hover{
 
 h1{
     font-size: 50px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
 p{
@@ -78,6 +95,7 @@ p{
     line-height: 50px;
 }
 
+/* section colors */
 .about, .portfolio{
     background: #fefefe;
     color: #262626;
@@ -88,6 +106,37 @@ p{
     color: #fefefe;
 }
 
+/* smooth scroll navigation */
 html{
     scroll-behavior:smooth;
+}
+
+/* headshot */
+.image-cropper {
+    overflow: hidden;
+    border-radius: 50%;
+    text-align: center;
+    filter: blur(0);
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px; /* Half the height */
+    margin-left: -200px; /* Half the width */
+}
+.profile-pic {
+  display: inline;
+  margin: 0 auto;
+  height: 105%;
+  width: auto;
+  filter: blur(0px);
+}
+
+#banner-text {
+    position: absolute;
+    color: #fefefe;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
