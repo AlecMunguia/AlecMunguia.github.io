@@ -16,6 +16,7 @@ body{
     height: 70px;
     z-index: 1;
     font-family: 'Didact Gothic', sans-serif;
+    box-shadow: 0 10px 10px -10px rgba(0,0,0,.2);
 }
 
 .nav{
