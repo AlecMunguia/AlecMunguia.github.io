@@ -16,7 +16,7 @@ body{
     height: 70px;
     z-index: 1;
     font-family: 'Didact Gothic', sans-serif;
-    box-shadow: 0 10px 10px -10px rgba(0,0,0,.2);
+    box-shadow: 0 20px 20px -20px rgba(0,0,0,.2);
 }
 
 .nav{
@@ -140,4 +140,48 @@ html{
     top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+
+
+/* portfolio gallery */
+.wrapper { 
+    background:#EFEFEF; 
+    box-shadow: 1px 1px 10px #999; 
+    margin: auto; 
+    text-align: center; 
+    position: relative;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px !important;
+    width: 800px;
+    padding-top: 5px;
+}
+.scrolls { 
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 310px;
+    white-space:nowrap
+} 
+.imageDiv img { 
+    box-shadow: 1px 1px 10px #999; 
+    margin: 2px;
+    max-height: 50px;
+    cursor: pointer;
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    vertical-align:top;
+}
+
+.contact-images {
+    height: 200px;
+}
+
+.contact-links {
+    margin: auto; 
+    text-align: center; 
+    position: relative;
 }
