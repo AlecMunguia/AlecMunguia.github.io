@@ -1,130 +1,135 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Didact Gothic', sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Didact Gothic", sans-serif;
 }
 
-.navbar{
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: whitesmoke;
-    width: 100%;
-    height: 70px;
-    z-index: 1;
-    font-family: 'Didact Gothic', sans-serif;
-    box-shadow: 0 20px 20px -20px rgba(0,0,0,.2);
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+  width: 100%;
+  height: 70px;
+  z-index: 1;
+  font-family: "Didact Gothic", sans-serif;
+  box-shadow: 0 20px 20px -20px rgba(0, 0, 0, 0.2);
 }
 
-.nav{
-    display: flex;
-    justify-content: right;
-    list-style: none;
-    margin-right: 15%;
-    font-family: 'Didact Gothic', sans-serif;
+.nav {
+  display: flex;
+  justify-content: right;
+  list-style: none;
+  margin-right: 15%;
+  font-family: "Didact Gothic", sans-serif;
 }
 
-.logo{
-    flex: 1 1 auto;
-    margin-left: 10%;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
-    font-size: 35px;
-    font-family: 'Didact Gothic', sans-serif;
+.initials {
+  flex: 1 1 auto;
+  margin-left: 10%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 35px;
+  font-family: "Didact Gothic", sans-serif;
 }
 
-a{
-    margin: 15px;
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Didact Gothic', sans-serif;
+a {
+  margin: 15px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Didact Gothic", sans-serif;
 }
-a:hover{
-    color: #000;
-    font-family: 'Didact Gothic', sans-serif;
-}
-
-.banner{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
+a:hover {
+  color: #000;
+  font-family: "Didact Gothic", sans-serif;
 }
 
-#austin{
-    position: relative;
-    filter: blur(8px);
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 
-.bio, .skills, .portfolio, .contact{
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100%;
-    height: 100vh;
-    font-family: 'Didact Gothic', sans-serif;
+#austin {
+  position: relative;
+  filter: blur(8px);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.bio,
+.skills,
+.portfolio,
+.contact {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  font-family: "Didact Gothic", sans-serif;
 }
 
 /* text styling */
-.text{
-    width: 65%;
-    height: 80%;
+.text {
+  width: 65%;
+  height: 80%;
 }
 
-h1{
-    font-size: 50px;
-    font-family: 'Didact Gothic', sans-serif;
+h1 {
+  font-size: 50px;
+  font-family: "Didact Gothic", sans-serif;
 }
 
-p{
-    font-size: 24px;
-    line-height: 50px;
+p {
+  font-size: 24px;
+  line-height: 50px;
 }
 
 /* section colors */
-.about, .portfolio{
-    background: #fefefe;
-    color: #262626;
+.about,
+.portfolio {
+  background: #fefefe;
+  color: #262626;
 }
 
-.skills, .contact{
-    background: #262626;
-    color: #fefefe;
+.skills,
+.contact {
+  background: #262626;
+  color: #fefefe;
 }
 
 /* smooth scroll navigation */
-html{
-    scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 /* headshot */
 .image-cropper {
-    overflow: hidden;
-    border-radius: 50%;
-    text-align: center;
-    filter: blur(0);
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    width: 400px;
-    height: 400px;
-    margin-top: -200px; /* Half the height */
-    margin-left: -200px; /* Half the width */
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+  filter: blur(0);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px; /* Half the height */
+  margin-left: -200px; /* Half the width */
 }
 .profile-pic {
   display: inline;
@@ -135,53 +140,72 @@ html{
 }
 
 #banner-text {
+  position: absolute;
+  color: #fefefe;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* --------------------------------------- */
+
+/* skills */
+#skills {
+  font-size: 24px;
+  text-align: left;
+}
+  
+  #logos > div {
+    
     position: absolute;
-    color: #fefefe;
-    top: 85%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-
-
+    text-align: right;
+  }
+/* --------------------------------------- */
 
 /* portfolio gallery */
-.wrapper { 
-    background:#EFEFEF; 
-    box-shadow: 1px 1px 10px #999; 
-    margin: auto; 
-    text-align: center; 
-    position: relative;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    margin-bottom: 20px !important;
-    width: 800px;
-    padding-top: 5px;
+
+.wrapper {
+  background: #efefef;
+  box-shadow: 1px 1px 10px #999;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px !important;
+  width: 800px;
+  padding-top: 5px;
 }
-.scrolls { 
-    overflow-x: scroll;
-    overflow-y: hidden;
-    height: 310px;
-    white-space:nowrap
-} 
-.imageDiv img { 
-    box-shadow: 1px 1px 10px #999; 
-    margin: 2px;
-    max-height: 50px;
-    cursor: pointer;
-    display:inline-block;
-    *display:inline;
-    *zoom:1;
-    vertical-align:top;
+.scrolls {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 310px;
+  white-space: nowrap;
+}
+.imageDiv img {
+  box-shadow: 1px 1px 10px #999;
+  margin: 2px;
+  max-height: 50px;
+  cursor: pointer;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
 }
 
+/* --------------------------------------- */
+
+/* contact */
 .contact-images {
-    height: 200px;
+  height: 200px;
 }
 
 .contact-links {
-    margin: auto; 
-    text-align: center; 
-    position: relative;
+  margin: auto;
+  text-align: center;
+  position: relative;
 }

@@ -9,9 +9,29 @@
       rel="stylesheet"
     />
   </head>
+
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+  <script>
+    // skills - logo cycle logic
+    $("#logos > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#logos > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#logos');
+},  3000);
+  </script>
+
   <body>
     <div class="navbar">
-      <a href="#" class="logo">AM</a>
+      <a href="#" class="initials">AM</a>
       <ul class="nav">
         <li><a href="#home">Home</a></li>
         <li><a href="#bio">Bio</a></li>
@@ -58,36 +78,110 @@
             <li>MongoDB</li>
             <li>MySQL</li>
             <li>Heroku</li>
+            <li>Redux</li>
           </lu>
         </p>
       </div>
+      <div id='logos'>
+        <div>
+          <img src="assets\logos\babel.svg" width=300px height=300px />
+        </div>
+        <div>
+          <img src="assets\logos\bootstrap.svg" width=300px height=300px />
+        </div>
+
+        <div>
+          <img src="assets\logos\css.svg" width=300px height=300px />
+        </div>
+
+        <div>
+          <img src="assets\logos\express.svg" width=300px height=300px />
+        </div>
+
+        <div>
+          <img src="assets\logos\heroku.svg" width=300px height=300px />
+        </div>
+        <div>
+          <img src="assets\logos\html.svg" width=300px height=300px />
+        </div>
+
+        <div>
+          <img src="assets\logos\javascript.svg" width=300px height=300px />
+        </div>
+
+        <div>
+          <img src="assets\logos\jquery.svg" width=300px height=300px />
+        </div>
+        <div>
+          <img src="assets\logos\material-ui.svg" width=300px height=300px />
+        </div>
+
+        <div>
+          <img src="assets\logos\mongodb.svg" width=300px height=300px />
+        </div>
+
+        <div>
+          <img src="assets\logos\mySQL.svg" width=300px height=300px />
+        </div>
+
+        <div>
+          <img src="assets\logos\node.svg" width=300px height=300px />
+        </div>
+        <div>
+          <img src="assets\logos\npm.svg" width=300px height=300px />
+        </div>
+
+        <div>
+          <img src="assets\logos\react.svg" width=300px height=300px />
+        </div>
+
+        <div>
+          <img src="assets\logos\redux.svg" width=300px height=300px />
+        </div>
+        <div>
+          <img src="assets\logos\sequelize.svg" width=300px height=300px />
+        </div>
+      </div>
+
     </div>
     <div class="portfolio" id="portfolio">
       <div class="text">
         <h1>Portfolio</h1>
         <div id="wrapper">
           <div class="scrolls">
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
+            <img src="greenleaves.png" />
+            <img src="greenleaves.png" />
+            <img src="greenleaves.png" />
+            <img src="greenleaves.png" />
+            <img src="greenleaves.png" />
+            <img src="greenleaves.png" />
+            <img src="greenleaves.png" />
+            <img src="greenleaves.png" />
+            <img src="greenleaves.png" />
+            <img src="greenleaves.png" />
           </div>
-      </div>
+        </div>
       </div>
     </div>
     <div class="contact" id="contact">
       <div class="text">
         <h1>Contact</h1>
         <div class="contact-links">
-          <img class="contact-images" src="gmail.svg" href="mailto=alec.munguia@gmail.com">
-          <img class="contact-images" src="linkedin.svg" href="https://www.linkedin.com/in/alec-munguia/">
-          <img class="contact-images" src="github.png" href="https://github.com/AlecMunguia">
+          <img
+            class="contact-images"
+            src="gmail.svg"
+            href="mailto=alec.munguia@gmail.com"
+          />
+          <img
+            class="contact-images"
+            src="linkedin.svg"
+            href="https://www.linkedin.com/in/alec-munguia/"
+          />
+          <img
+            class="contact-images"
+            src="github.png"
+            href="https://github.com/AlecMunguia"
+          />
         </div>
       </div>
     </div>
