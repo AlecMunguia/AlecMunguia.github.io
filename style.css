@@ -1,4 +1,8 @@
+* {box-sizing: border-box;}
+
 body{
+    width: 100%;
+    Height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Didact Gothic', sans-serif;
@@ -25,6 +29,7 @@ body{
     list-style: none;
     margin-right: 15%;
     font-family: 'Didact Gothic', sans-serif;
+    margin: 0 30px 0 0;
 }
 
 .logo{
@@ -35,6 +40,46 @@ body{
     font-weight: bold;
     font-size: 35px;
     font-family: 'Didact Gothic', sans-serif;
+}
+
+
+.navbar a {
+    clear: right;
+    text-decoration: none;
+    margin: 0 10px;
+
+}
+
+label {
+    margin: - 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+}
+#toggle {
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    .nav {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .nav a {
+        display: block;
+        border-bottom: 1px solid black;
+        margin: 0;
+    }
+    #toggle:checked + .nav {
+        display: block;
+    }
 }
 
 a{
@@ -80,6 +125,10 @@ a:hover{
     font-family: 'Didact Gothic', sans-serif;
 }
 
+.contact{
+    text-align: center;
+    height: 40vh;
+}
 /* text styling */
 .text{
     width: 65%;
@@ -96,8 +145,11 @@ p{
     line-height: 50px;
 }
 
+
+
+
 /* section colors */
-.about, .portfolio{
+.bio, .portfolio{
     background: #fefefe;
     color: #262626;
 }
@@ -105,14 +157,21 @@ p{
 .skills, .contact{
     background: #262626;
     color: #fefefe;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 }
+
+
+
 
 /* smooth scroll navigation */
 html{
     scroll-behavior:smooth;
 }
 
-/* headshot */
+
+
+
+/* home */
 .image-cropper {
     overflow: hidden;
     border-radius: 50%;
@@ -146,42 +205,62 @@ html{
 
 
 /* portfolio gallery */
-.wrapper { 
-    background:#EFEFEF; 
-    box-shadow: 1px 1px 10px #999; 
-    margin: auto; 
-    text-align: center; 
-    position: relative;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    margin-bottom: 20px !important;
-    width: 800px;
-    padding-top: 5px;
-}
-.scrolls { 
+.flexbox {
     overflow-x: scroll;
     overflow-y: hidden;
-    height: 310px;
-    white-space:nowrap
-} 
-.imageDiv img { 
-    box-shadow: 1px 1px 10px #999; 
-    margin: 2px;
-    max-height: 50px;
-    cursor: pointer;
-    display:inline-block;
-    *display:inline;
-    *zoom:1;
-    vertical-align:top;
+    white-space: nowrap;
+}
+  .container {
+    position: relative;
+    display: inline-block;
+    height: 330px;
+    }
+
+
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 2s;
 }
 
+.overlay {
+    position: absolute; 
+    bottom: 4%; 
+    transform: translate(0%, 50%);
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /*Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  
+.container:hover .overlay {
+    opacity: 1;
+  } 
+
+
+/*contact */
 .contact-images {
-    height: 200px;
+    height: 120px;
+    position: nowrap;
 }
 
 .contact-links {
     margin: auto; 
     text-align: center; 
     position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+.contact-images {
+    height: 25%;
+    width: 25%;
+    }
 }

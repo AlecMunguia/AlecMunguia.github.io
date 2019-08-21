@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" contents="width=device-width, initial-scale=1.0">
     <title>Alec Munguia</title>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -13,11 +15,15 @@
     <div class="navbar">
       <a href="#" class="logo">AM</a>
       <ul class="nav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#bio">Bio</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle"?>
+        
+          <li><a href="#home">Home</a></li>
+          <li><a href="#bio">Bio</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        
       </ul>
     </div>
     <div class="banner" id="home">
@@ -65,29 +71,68 @@
     <div class="portfolio" id="portfolio">
       <div class="text">
         <h1>Portfolio</h1>
-        <div id="wrapper">
-          <div class="scrolls">
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
-              <img src="greenleaves.png"/>
+        <div class="flexbox">
+          <div class="container">
+              <a href="https://greenleaves-deployed.herokuapp.com/">
+              <img src="assets/projects/greenleaves.png" width="330px" height="100%" title="Green Leaves Produce" class="image"></a>
+              <div class="overlay">Green Leaves Produce</div>
+            </div>
+          <div class="container">
+              <a href="https://codemasterspro.github.io/CodeMasters/">
+              <img src="assets/projects/runsource.jpg" width="330px" height="100%" title="Run Source" class="image"></a>
+              <div class="overlay">Run Source</div>
+            </div>  
+          <div class="container">
+              <a href="https://puppy-clicker-react-game.herokuapp.com/">
+              <img src="assets/projects/puppyclicker.jpg" width="330px" height="100%" title="React Clicky Game" class="image"></a>
+              <div class="overlay">React Clicky Game</div>
+          </div>  
+          <div class="container">
+              <a href="https://friendfinder-am.herokuapp.com/">
+              <img src="assets/projects/friendfinder.jpg" width="330px" height="100%" title="Friend Finder" class="image"></a>
+              <div class="overlay">Friend Finder</div>
+            </div>
+            <div class="container">
+              <a href="https://github.com/AlecMunguia/Bamazon">
+              <img src="assets/projects/bamazon.jpg" width="330px" height="100%" title="Bamazon" class="image"></a>
+              <div class="overlay">Bamazon</div>
+            </div>  
+            <div class="container">
+            <a href="https://github.com/AlecMunguia/liri-node-app">
+            <img src="assets/projects/liri.png" width="330px" height="100%" title="Liri" class="image"></a>
+            <div class="overlay">liri</div>
+            </div>
+            <div class="container">
+              <a href="https://alecmunguia.github.io/The-Psychic-Game/">
+              <img src="assets/projects/psychic.jpg" width="330px" height="100%" title="Psychic Game" class="image"></a>
+              <div class="overlay">Psychic Game</div>
+            </div>
+            <div class="container">
+              <a href="https://alecmunguia.github.io/TriviaGame/">
+              <img src="assets/projects/trivia.jpg" width="330px" height="100%" title="Keto Quiz" class="image"></a>
+              <div class="overlay">Keto Trivia</div>
+            </div>  
+            <div class="container">  
+              <a href="https://alecmunguia.github.io/Train-Scheduler/">
+              <img src="assets/projects/trainscheduler.jpg" width="330px" height="100%" title="Train Scheduler" class="image"></a>
+              <div class="overlay">Train Scheduler</div>
+            </div>  
+            <div class="container">
+              <a href="https://alecmunguia.github.io/unit-4-game/">
+              <img src="assets/projects/crystalgame.jpg" width="330px" height="100%" title="Crystal Clicker Game" class="image"></a>
+              <div class="overlay">The Crystal Game</div>
+            </div>
           </div>
       </div>
-      </div>
     </div>
+  </div>
     <div class="contact" id="contact">
       <div class="text">
         <h1>Contact</h1>
         <div class="contact-links">
-          <img class="contact-images" src="gmail.svg" href="mailto=alec.munguia@gmail.com">
-          <img class="contact-images" src="linkedin.svg" href="https://www.linkedin.com/in/alec-munguia/">
-          <img class="contact-images" src="github.png" href="https://github.com/AlecMunguia">
+          <a href="mailto=alec.munguia@gmail.com?Subject=Hello%20again"><img class="contact-images" src="gmail.svg" /></a>
+          <a href="https://www.linkedin.com/in/alec-munguia/"><img class="contact-images" src="linkedin.svg"></a>
+          <a href="https://www.github.com/AlecMunguia"><img class="contact-images" src="github.png"></a>
         </div>
       </div>
     </div>
