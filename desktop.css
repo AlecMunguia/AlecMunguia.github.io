@@ -7,6 +7,8 @@
 body{
     width: 100%;
     Height: 100%;
+    margin: 0;
+    padding: 0;
     font-family: 'Didact Gothic', sans-serif;
 }
 
@@ -64,59 +66,6 @@ label {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
-    label {
-        display: block;
-        cursor: pointer;
-    }
-    .nav {
-        text-align: center;
-        width: 100%;
-        display: none;
-    }
-    .nav a {
-        display: block;
-        border-bottom: 1px solid black;
-        margin: 0;
-    }
-    #toggle:checked + .nav {
-        display: block;
-    }
-
-
-    .image-cropper {
-        overflow: hidden;
-        border-radius: 30%;
-        text-align: center;
-        filter: blur(0);
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        width: 100px;
-        height: 100px;
-        margin-top: -80px; /* Half the height */
-        margin-left: -80px; /* Half the width */
-    }
-    .profile-pic {
-      display: inline;
-      margin: 0 auto;
-      filter: blur(0px);
-    }
-
-    
-#banner-text {
-    font-size: 36px;
-    position: absolute;
-    color: #fefefe;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    }
-
-}
-
-
-
 
 
 a{
@@ -150,7 +99,7 @@ a:hover{
     background-size: cover;
 }
 
-.bio, .skills, .portfolio, .contact{
+.bio {
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -158,7 +107,19 @@ a:hover{
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
-    height: 100vh;
+    height: 450px;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.skills, .portfolio, .contact{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 700px;
     font-family: 'Didact Gothic', sans-serif;
 }
 
@@ -246,6 +207,7 @@ html{
 
 
 
+
 /* portfolio gallery */
 .flexbox {
     width: 100%;
@@ -260,7 +222,6 @@ html{
     display: inline-block;
     height: 330px;
     }
-
 
 .image {
     display: block;
@@ -291,6 +252,9 @@ html{
   } 
 
 
+
+
+
 /*contact */
 .contact-images {
     display: inline-block;
@@ -302,11 +266,4 @@ html{
     margin: auto; 
     bottom: 0;
     align-items: center;
-}
-
-@media only screen and (max-width: 800px) {
-.contact-images {
-    height: 50px;
-    width: 20%;
-    }
 }
