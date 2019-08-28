@@ -194,7 +194,10 @@ html{
 }
 
 
-
+/* skill logos */
+#logos > div {
+    display: none;
+  }
 
 
 /* portfolio gallery */

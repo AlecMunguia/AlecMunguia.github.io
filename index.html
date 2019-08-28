@@ -5,11 +5,17 @@
     <meta name="viewport" contents="width=device-width, initial-scale=1.0">
     <title>Alec Munguia</title>
     
-    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 599px)" href="mobile.css" />
+    <link rel="stylesheet" media="screen and (max-width: 599px)" href="mobile.css" />
     <link rel="stylesheet" media="screen and (min-width: 600px)" href="desktop.css" />
 
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet" />
   </head>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+  <script type='text/JavaScript' src='logic.js'></script>
   <body>
     <div class="navbar">
       <a href="#" class="logo">AM</a>
@@ -26,9 +32,9 @@
       </ul>
     </div>
     <div class="banner" id="home">
-      <img src="austin.jpg" id="austin" />
+      <img src="assets/photos/austin.jpg" id="austin" />
       <div class="image-cropper">
-        <img src="headshot.jpg" class="profile-pic" />
+        <img src="assets/photos/headshot.jpg" class="profile-pic" />
       </div>
       <h1 id="banner-text">Alec Munguia</h1>
     </div>
@@ -68,6 +74,10 @@
           </lu>
         </p>
       </div>
+<!-- ------------------------------------ -->
+      <div id='logos'>
+      </div>
+<!-- ------------------------------------ -->
     </div>
     <div class="portfolio" id="portfolio">
       <div class="text">
