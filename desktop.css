@@ -19,7 +19,7 @@ body{
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: whitesmoke;
+    background-color: rgb(54, 36, 36);
     width: 100%;
     height: 70px;
     z-index: 1;
@@ -27,23 +27,23 @@ body{
     box-shadow: 0 20px 20px -20px rgba(0,0,0,.2);
 }
 
-.nav{
+.navItems{
     display: flex;
-    justify-content: right;
+    justify-content: middle;
     list-style: none;
-    margin-right: 15%;
     font-family: 'Didact Gothic', sans-serif;
     margin: 0 30px 0 0;
 }
 
 .logo{
     flex: 1 1 auto;
-    margin-left: 10%;
+    margin-left: 25%;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bold;
     font-size: 35px;
     font-family: 'Didact Gothic', sans-serif;
+    color: whitesmoke;
 }
 
 
@@ -51,7 +51,7 @@ body{
     clear: right;
     text-decoration: none;
     margin: 0 10px;
-
+    color: whitesmoke;
 }
 
 label {
@@ -68,35 +68,19 @@ label {
 
 
 
-a{
+#toggle a{
     margin: 15px;
     color: #000;
     text-decoration: none;
-    text-transform: uppercase;
     font-family: 'Didact Gothic', sans-serif;
 }
-a:hover{
-    color: #000;
-    font-family: 'Didact Gothic', sans-serif;
-}
+
 
 .banner{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-}
-
-#austin{
-    position: relative;
-    filter: blur(8px);
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
+    background-color: black;
 }
 
 .bio {
@@ -107,7 +91,7 @@ a:hover{
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
-    height: 450px;
+    height: 100vh;
     font-family: 'Didact Gothic', sans-serif;
 }
 
@@ -119,7 +103,7 @@ a:hover{
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
-    height: 700px;
+    height: 100vh;
     font-family: 'Didact Gothic', sans-serif;
 }
 
@@ -129,6 +113,7 @@ a:hover{
     text-align: center;
     height: 10vh;
 }
+
 /* text styling */
 .text{
     font-size: 24px;
@@ -147,32 +132,21 @@ p{
     line-height: 50px;
 }
 
-
-
-
 /* section colors */
 .bio, .portfolio{
-    background: #fefefe;
-    color: #262626;
-    background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+    background: black;
+    color: whitesmoke;
 }
 
 .skills, .contact{
-    background: #262626;
-    color: #fefefe;
-    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    background: black;
+    color: whitesmoke;
 }
-
-
-
 
 /* smooth scroll navigation */
 html{
     scroll-behavior:smooth;
 }
-
-
-
 
 /* home */
 .image-cropper {
@@ -203,10 +177,6 @@ html{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-
-
-
 
 /* portfolio gallery */
 .flexbox {
@@ -251,19 +221,12 @@ html{
     opacity: 1;
   } 
 
-
-
-
-
 /*contact */
-.contact-images {
-    display: inline-block;
-    height: 50px;
-    position: nowrap;
-}
-
-.contact-links {
+.contact-links a {
+    display: inline;
     margin: auto; 
     bottom: 0;
     align-items: center;
+    color: whitesmoke;
+    text-decoration: none;
 }
