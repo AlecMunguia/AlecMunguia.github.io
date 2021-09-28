@@ -268,3 +268,10 @@ html{
     box-sizing:border-box;
     margin: 4px;
 }
+
+
+
+.skillGrid {
+    display: flex;
+    flex-wrap: wrap;
+}

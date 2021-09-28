@@ -1,3 +1,0 @@
-for logos:
-opacity: 0;
-*hidden on load*
