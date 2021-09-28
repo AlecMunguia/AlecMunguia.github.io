@@ -5,24 +5,21 @@
     <meta name="viewport" contents="width=device-width, initial-scale=1.0">
     <title>Alec Munguia</title>
     
-    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 599px)" href="mobile.css" />
     <link rel="stylesheet" media="screen and (min-width: 600px)" href="desktop.css" />
-
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 599px)" href="mobile.css" />
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <div class="navbar">
+      <div class="navbar">
       <a href="#" class="logo">AM</a>
       <ul class="navItems">
         <label for="toggle">&#9776;</label>
         <input type="checkbox" id="toggle"?>
-        
           <li><a href="#home">Home</a></li>
           <li><a href="#bio">Bio</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
-        
       </ul>
     </div>
     <div class="banner" id="home">
@@ -30,7 +27,7 @@
         <img src="headshot.jpg" class="profile-pic" />
       </div>
       <h1 id="banner-text">Alec Munguia</h1>
-      <p>a web developer</p>
+      <div class="webDev">a web developer</div>
     </div>
 
     <div class="bio" id="bio">
@@ -39,13 +36,16 @@
         <p>
           I'm a web developer based in Austin, Texas. I enjoy problem solving and minimalist design.<br>When I'm not writing code, you'll find me writing music, running, and playing with my Shiba Inu, Pup.
         </p>
+        <div class='pupPics'>
+          <img class='pup' src="assets/photos/SleepingPup.jpg"><img class='pup' src="assets/photos/SleepingPup.jpg"><img class='pup' src="assets/photos/SleepingPup.jpg">
+        </div>
         <p style="font-size: 12px;"><i>My dog has an <a style="color: cyan; text-decoration: none;" href="https://www.instagram.com/atxpup/?hl=en">Instagram account</a>. I totally understand if you hate me too much to keep reading.</i></p>
       </div>
     </div>
     <div class="skills" id="skills">
       <div class="text">
         <h1>Skills</h1>
-        <p>
+        <p class="skillList">
           <lu>
             <li>JavaScript</li>
             <li>HTML5</li>
@@ -76,17 +76,17 @@
               <img src="assets/projects/greenleaves.png" width="330px" height="100%" class="image"></a>
               <div class="overlay">Green Leaves Produce</div>
             </div>
-          <div class="container">
+            <div class="container">
               <a href="https://codemasterspro.github.io/CodeMasters/" target="_blank">
               <img src="assets/projects/runsource.jpg" width="330px" height="100%" class="image"></a>
               <div class="overlay">Run Source</div>
             </div>  
-          <div class="container">
+            <div class="container">
               <a href="https://puppy-clicker-react-game.herokuapp.com/" target="_blank">
               <img src="assets/projects/puppyclicker.jpg" width="330px" height="100%" class="image"></a>
               <div class="overlay">React Clicky Game</div>
-          </div>  
-          <div class="container">
+            </div>  
+            <div class="container">
               <a href="https://friendfinder-am.herokuapp.com/" target="_blank">
               <img src="assets/projects/friendfinder.jpg" width="330px" height="100%" class="image"></a>
               <div class="overlay">Friend Finder</div>
@@ -124,10 +124,9 @@
           </div>
       </div>
     </div>
-  </div>
     <div class="contact" id="contact">
-      <p>Get in touch</p>
         <div class="contact-links">
+          <p>Get in touch</p>
           <p><a href=mailto:alec.munguia@gmail.com>Email&emsp;</a><a href="https://www.linkedin.com/in/alec-munguia/">LinkedIn&emsp;</a><a href="https://www.github.com/AlecMunguia">GitHub</a></p>
         </div>
       </div>
