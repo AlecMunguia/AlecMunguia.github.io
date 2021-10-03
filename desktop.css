@@ -10,6 +10,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Didact Gothic', sans-serif;
+    min-width: 1440px;
 }
 
 .navbar{
@@ -134,6 +135,7 @@ h1{
     font-size: 50px;
     font-family: 'Didact Gothic', sans-serif;
     color: cyan;
+    padding-bottom: 20px;
 }
 
 p{
@@ -198,10 +200,31 @@ html{
 
 }
 
-.skillList {
-    margin-top: 40px;
+.skillWrapper {
+    position: relative;
+    margin-top: 10%;
 }
 
+.skillList {
+    width: 50%;
+    float: left;
+}
+
+.skillGrid img {
+    width: 150px;   
+}
+
+.skillGrid {
+    width: 50%; 
+    float: right;
+    min-width: 460px;
+}
+
+@media only screen and (max-width: 1440px) {
+    .skillGrid {
+        display: none;
+    }
+}
 
 /* portfolio gallery */
 .flexbox {
@@ -211,6 +234,7 @@ html{
     overflow-y: hidden;
     white-space: nowrap;
     box-shadow: 0 40px 40px -40px rgba(0,0,0,.2);
+    margin-top: 10%;
 }
   .container {
     position: relative;
@@ -222,7 +246,7 @@ html{
     display: block;
     width: 100%;
     height: 100%;
-    transition: all 2s;
+    transition: all 1s;
 }
 
 .overlay {
@@ -259,7 +283,8 @@ html{
     display:flex;
     flex-wrap:wrap;
     flex-direction:row;
-    margin-top: 10%;
+    width: 100%;
+    margin: 30px 0 30px 0;
 }
 
 .pup {
@@ -267,11 +292,4 @@ html{
     width: 31%;
     box-sizing:border-box;
     margin: 4px;
-}
-
-
-
-.skillGrid {
-    display: flex;
-    flex-wrap: wrap;
 }
