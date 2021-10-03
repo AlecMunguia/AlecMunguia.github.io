@@ -11,7 +11,7 @@
         margin: 0;
         padding: 0;
         font-family: 'Didact Gothic', sans-serif;
-        min-width: 1440px;
+        min-width: 1024px;
     }
     
     .navbar{
@@ -116,6 +116,7 @@
         width: 100%;
         height: 100vh;
         font-family: 'Didact Gothic', sans-serif;
+        overflow: hidden;
     }
     
     .contact{
@@ -305,7 +306,7 @@
         margin: 0;
         padding: 0;
         font-family: 'Didact Gothic', sans-serif;
-        min-width: 1440px;
+        min-width: 768px;
     }
     
     .navbar{
@@ -410,13 +411,14 @@
         width: 100%;
         height: 100vh;
         font-family: 'Didact Gothic', sans-serif;
+        overflow: hidden;
     }
     
     .contact{
         position: relative;
         bottom: 0;
         text-align: center;
-        height: 10vh;
+        height: 20vh;
     }
     
     /* text styling */
@@ -510,15 +512,7 @@
     }
     
     .skillGrid {
-        width: 50%; 
-        float: right;
-        min-width: 460px;
-    }
-    
-    @media only screen and (max-width: 1440px) {
-        .skillGrid {
-            display: none;
-        }
+        display: none;
     }
     
     /* portfolio gallery */
@@ -707,7 +701,7 @@
         position: relative;
         bottom: 0;
         text-align: center;
-        height: 10vh;
+        height: 20vh;
     }
     
     /* text styling */
