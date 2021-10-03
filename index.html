@@ -5,62 +5,79 @@
     <meta name="viewport" contents="width=device-width, initial-scale=1.0">
     <title>Alec Munguia</title>
     
-    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 599px)" href="mobile.css" />
     <link rel="stylesheet" media="screen and (min-width: 600px)" href="desktop.css" />
-
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 599px)" href="mobile.css" />
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <div class="navbar">
+      <div class="navbar">
       <a href="#" class="logo">AM</a>
-      <ul class="nav">
+      <ul class="navItems">
         <label for="toggle">&#9776;</label>
         <input type="checkbox" id="toggle"?>
-        
           <li><a href="#home">Home</a></li>
           <li><a href="#bio">Bio</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
-        
       </ul>
     </div>
     <div class="banner" id="home">
-      <img src="austin.jpg" id="austin" />
       <div class="image-cropper">
         <img src="headshot.jpg" class="profile-pic" />
       </div>
       <h1 id="banner-text">Alec Munguia</h1>
+      <div class="webDev">a web developer</div>
     </div>
 
     <div class="bio" id="bio">
       <div class="text">
         <h1>About Me</h1>
         <p>
-          I'm a full-stack developer based in beautiful Austin, Texas. I enjoy
-          high-level problem solving and smooth, elegant design. When I'm not
-          writing code, you'll find me writing music, running, and playing with
-          my Shiba Inu, Pup.
+          I'm a web developer based in Austin, Texas. I enjoy problem solving and minimalist design. When I'm not writing code, you'll find me writing music, cooking, and playing with my Shiba Inu, Pup.
         </p>
+        <div class='pupPics'>
+          <img class='pup' src="assets/photos/music.jpg" alt="Pedalboard">
+          <img class='pup' src="assets/photos/cooking.jpg" alt="Steamy cooking pots">
+          <img class='pup' src="assets/photos/SleepingPup.jpg" alt="Sleeping dog. Who's a good boy?">
+        </div>
+        <p style="font-size: 12px;"><i>My dog has an <a style="color: cyan; text-decoration: none;" href="https://www.instagram.com/atxpup/?hl=en" target="_blank">Instagram account</a>. I totally understand if you hate me too much to keep reading.</i></p>
       </div>
     </div>
     <div class="skills" id="skills">
       <div class="text">
         <h1>Skills</h1>
-        <p>
+        <div class="skillWrapper">
+          <div class='skillGrid'>
+            <div>
+              <img src='assets/logos/js.png'>
+              <img src='assets/logos/css.png'>
+              <img src='assets/logos/html.png'>
+            </div>
+            <div>
+              <img src='assets/logos/jquery.png'>
+              <img src='assets/logos/bootstrap.png'>
+              <img src='assets/logos/cc.png'>
+            </div>
+            <div>
+              <img src='assets/logos/mysql.png'>
+              <img src='assets/logos/node.png'>
+              <img src='assets/logos/react.png'>
+            </div> 
+          </div>
+
+        <p class="skillList">
           <lu>
             <li>JavaScript</li>
             <li>HTML5</li>
-            <li>CSS</li>
+            <li>CSS3</li>
             <li>JQuery</li>
             <li>Responsive Design</li>
             <li>Bootstrap</li>
-            <li>Material-UI</li>
             <li>Node.js</li>
             <li>React.js</li>
             <li>Sequelize</li>
             <li>Express.js</li>
-            <li>MongoDB</li>
             <li>MySQL</li>
             <li>Heroku</li>
             <li>Photoshop</li>
@@ -68,70 +85,70 @@
           </lu>
         </p>
       </div>
+      </div>
     </div>
+
     <div class="portfolio" id="portfolio">
       <div class="text">
         <h1>Portfolio</h1>
         <div class="flexbox">
           <div class="container">
-              <a href="https://greenleaves-deployed.herokuapp.com/">
+              <a href="https://greenleaves-deployed.herokuapp.com/" target="_blank">
               <img src="assets/projects/greenleaves.png" width="330px" height="100%" class="image"></a>
               <div class="overlay">Green Leaves Produce</div>
             </div>
-          <div class="container">
-              <a href="https://codemasterspro.github.io/CodeMasters/">
+            <div class="container">
+              <a href="https://codemasterspro.github.io/CodeMasters/" target="_blank">
               <img src="assets/projects/runsource.jpg" width="330px" height="100%" class="image"></a>
               <div class="overlay">Run Source</div>
             </div>  
-          <div class="container">
-              <a href="https://puppy-clicker-react-game.herokuapp.com/">
+            <div class="container">
+              <a href="https://puppy-clicker-react-game.herokuapp.com/" target="_blank">
               <img src="assets/projects/puppyclicker.jpg" width="330px" height="100%" class="image"></a>
               <div class="overlay">React Clicky Game</div>
-          </div>  
-          <div class="container">
-              <a href="https://friendfinder-am.herokuapp.com/">
+            </div>  
+            <div class="container">
+              <a href="https://friendfinder-am.herokuapp.com/" target="_blank">
               <img src="assets/projects/friendfinder.jpg" width="330px" height="100%" class="image"></a>
               <div class="overlay">Friend Finder</div>
             </div>
             <div class="container">
-              <a href="https://github.com/AlecMunguia/Bamazon">
+              <a href="https://github.com/AlecMunguia/Bamazon" target="_blank">
               <img src="assets/projects/bamazon.jpg" width="330px" height="100%" class="image"></a>
               <div class="overlay">Bamazon</div>
             </div>  
             <div class="container">
-            <a href="https://github.com/AlecMunguia/liri-node-app">
+            <a href="https://github.com/AlecMunguia/liri-node-app" target="_blank">
             <img src="assets/projects/liri.png" width="330px" height="100%" class="image"></a>
             <div class="overlay">liri</div>
             </div>
             <div class="container">
-              <a href="https://alecmunguia.github.io/The-Psychic-Game/">
+              <a href="https://alecmunguia.github.io/The-Psychic-Game/" target="_blank">
               <img src="assets/projects/psychic.jpg" width="330px" height="100%" class="image"></a>
               <div class="overlay">Psychic Game</div>
             </div>
             <div class="container">
-              <a href="https://alecmunguia.github.io/TriviaGame/">
+              <a href="https://alecmunguia.github.io/TriviaGame/" target="_blank">
               <img src="assets/projects/trivia.jpg" width="330px" height="100%" class="image"></a>
               <div class="overlay">Keto Trivia</div>
             </div>  
             <div class="container">  
-              <a href="https://alecmunguia.github.io/Train-Scheduler/">
+              <a href="https://alecmunguia.github.io/Train-Scheduler/" target="_blank">
               <img src="assets/projects/trainscheduler.jpg" width="330px" height="100%" class="image"></a>
               <div class="overlay">Train Scheduler</div>
             </div>  
             <div class="container">
-              <a href="https://alecmunguia.github.io/unit-4-game/">
+              <a href="https://alecmunguia.github.io/unit-4-game/" target="_blank">
               <img src="assets/projects/crystalgame.jpg" width="330px" height="100%" class="image"></a>
               <div class="overlay">The Crystal Game</div>
             </div>
           </div>
       </div>
     </div>
-  </div>
     <div class="contact" id="contact">
         <div class="contact-links">
-          <a href=mailto:alec.munguia@gmail.com><img class="contact-images" src="assets/contact-icons/gmail.svg" /></a>
-          <a href="https://www.linkedin.com/in/alec-munguia/"><img class="contact-images" src="assets/contact-icons/linkedin.svg"></a>
-          <a href="https://www.github.com/AlecMunguia"><img class="contact-images" src="assets/contact-icons/github.svg"></a>
+          <p>Get in touch</p>
+          <p><a href=mailto:alec.munguia@gmail.com>Email&emsp;</a><a href="https://www.linkedin.com/in/alec-munguia/">LinkedIn&emsp;</a><a href="https://www.github.com/AlecMunguia">GitHub</a></p>
         </div>
       </div>
     </div>

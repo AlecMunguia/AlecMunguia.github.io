@@ -10,6 +10,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Didact Gothic', sans-serif;
+    min-width: 1440px;
 }
 
 .navbar{
@@ -19,39 +20,48 @@ body{
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: whitesmoke;
+    background-color: black;
     width: 100%;
     height: 70px;
     z-index: 1;
     font-family: 'Didact Gothic', sans-serif;
-    box-shadow: 0 20px 20px -20px rgba(0,0,0,.2);
+    box-shadow: 0 20px 20px -20px cyan;
 }
 
-.nav{
+.navItems{
     display: flex;
-    justify-content: right;
+    justify-content: center;
     list-style: none;
-    margin-right: 15%;
     font-family: 'Didact Gothic', sans-serif;
     margin: 0 30px 0 0;
+    max-width: 60%;
+    color: cyan;
+    font-size: 18px;
+}
+
+.navItems a:hover {
+    border-bottom: 2px solid cyan;
 }
 
 .logo{
-    flex: 1 1 auto;
-    margin-left: 10%;
+    display: flex;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bold;
     font-size: 35px;
     font-family: 'Didact Gothic', sans-serif;
+    padding-right: 10px;
 }
-
 
 .navbar a {
     clear: right;
     text-decoration: none;
     margin: 0 10px;
+    color: whitesmoke;
+}
 
+.navbar .logo {
+    color: cyan;
 }
 
 label {
@@ -68,35 +78,19 @@ label {
 
 
 
-a{
+#toggle a{
     margin: 15px;
     color: #000;
     text-decoration: none;
-    text-transform: uppercase;
     font-family: 'Didact Gothic', sans-serif;
 }
-a:hover{
-    color: #000;
-    font-family: 'Didact Gothic', sans-serif;
-}
+
 
 .banner{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-}
-
-#austin{
-    position: relative;
-    filter: blur(8px);
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
+    background: linear-gradient(to top, black, cyan);
 }
 
 .bio {
@@ -107,7 +101,7 @@ a:hover{
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
-    height: 450px;
+    height: 100vh;
     font-family: 'Didact Gothic', sans-serif;
 }
 
@@ -119,7 +113,7 @@ a:hover{
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
-    height: 700px;
+    height: 100vh;
     font-family: 'Didact Gothic', sans-serif;
 }
 
@@ -129,6 +123,7 @@ a:hover{
     text-align: center;
     height: 10vh;
 }
+
 /* text styling */
 .text{
     font-size: 24px;
@@ -139,6 +134,8 @@ a:hover{
 h1{
     font-size: 50px;
     font-family: 'Didact Gothic', sans-serif;
+    color: cyan;
+    padding-bottom: 20px;
 }
 
 p{
@@ -147,32 +144,21 @@ p{
     line-height: 50px;
 }
 
-
-
-
 /* section colors */
 .bio, .portfolio{
-    background: #fefefe;
-    color: #262626;
-    background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+    background: black;
+    color: whitesmoke;
 }
 
 .skills, .contact{
-    background: #262626;
-    color: #fefefe;
-    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    background: black;
+    color: whitesmoke;
 }
-
-
-
 
 /* smooth scroll navigation */
 html{
     scroll-behavior:smooth;
 }
-
-
-
 
 /* home */
 .image-cropper {
@@ -198,15 +184,47 @@ html{
 
 #banner-text {
     position: absolute;
-    color: #fefefe;
+    color: whitesmoke;
     top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+.webDev {
+    position: absolute;
+    text-align: center;
+    color: cyan;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
+}
 
+.skillWrapper {
+    position: relative;
+    margin-top: 10%;
+}
 
+.skillList {
+    width: 50%;
+    float: left;
+}
+
+.skillGrid img {
+    width: 150px;   
+}
+
+.skillGrid {
+    width: 50%; 
+    float: right;
+    min-width: 460px;
+}
+
+@media only screen and (max-width: 1440px) {
+    .skillGrid {
+        display: none;
+    }
+}
 
 /* portfolio gallery */
 .flexbox {
@@ -216,6 +234,7 @@ html{
     overflow-y: hidden;
     white-space: nowrap;
     box-shadow: 0 40px 40px -40px rgba(0,0,0,.2);
+    margin-top: 10%;
 }
   .container {
     position: relative;
@@ -227,7 +246,7 @@ html{
     display: block;
     width: 100%;
     height: 100%;
-    transition: all 2s;
+    transition: all 1s;
 }
 
 .overlay {
@@ -251,19 +270,26 @@ html{
     opacity: 1;
   } 
 
-
-
-
-
 /*contact */
-.contact-images {
-    display: inline-block;
-    height: 50px;
-    position: nowrap;
-}
-
-.contact-links {
-    margin: auto; 
+.contact-links a {
+    display: inline;
     bottom: 0;
     align-items: center;
+    color: cyan;
+    text-decoration: none;
+}
+
+.pupPics {
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    width: 100%;
+    margin: 30px 0 30px 0;
+}
+
+.pup {
+    flex: 0 25%;
+    width: 31%;
+    box-sizing:border-box;
+    margin: 4px;
 }
