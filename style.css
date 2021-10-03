@@ -4,309 +4,887 @@
     padding: 0;
 }
 
-body{
-    width: 100%;
-    Height: 100%;
-    font-family: 'Didact Gothic', sans-serif;
-}
-
-.navbar{
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: whitesmoke;
-    width: 100%;
-    height: 70px;
-    z-index: 1;
-    font-family: 'Didact Gothic', sans-serif;
-    box-shadow: 0 20px 20px -20px rgba(0,0,0,.2);
-}
-
-.nav{
-    display: flex;
-    justify-content: right;
-    list-style: none;
-    margin-right: 15%;
-    font-family: 'Didact Gothic', sans-serif;
-    margin: 0 30px 0 0;
-}
-
-.logo{
-    flex: 1 1 auto;
-    margin-left: 10%;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
-    font-size: 35px;
-    font-family: 'Didact Gothic', sans-serif;
-}
-
-
-.navbar a {
-    clear: right;
-    text-decoration: none;
-    margin: 0 10px;
-
-}
-
-label {
-    margin: - 40px 0 0;
-    font-size: 26px;
-    line-height: 70px;
-    display: none;
-    width: 26px;
-    float: right;
-}
-#toggle {
-    display: none;
-}
-
-@media only screen and (max-width: 600px) {
-    label {
-        display: block;
-        cursor: pointer;
-    }
-    .nav {
-        text-align: center;
+@media only screen and (min-width: 1024px) {
+    body{
         width: 100%;
+        Height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Didact Gothic', sans-serif;
+        min-width: 1024px;
+    }
+    
+    .navbar{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: black;
+        width: 100%;
+        height: 70px;
+        z-index: 1;
+        font-family: 'Didact Gothic', sans-serif;
+        box-shadow: 0 20px 20px -20px cyan;
+    }
+    
+    .navItems{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        font-family: 'Didact Gothic', sans-serif;
+        margin: 0 30px 0 0;
+        max-width: 60%;
+        color: cyan;
+        font-size: 18px;
+    }
+    
+    .navItems a:hover {
+        border-bottom: 2px solid cyan;
+    }
+    
+    .logo{
+        display: flex;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-size: 35px;
+        font-family: 'Didact Gothic', sans-serif;
+        padding-right: 10px;
+    }
+    
+    .navbar a {
+        clear: right;
+        text-decoration: none;
+        margin: 0 10px;
+        color: whitesmoke;
+    }
+    
+    .navbar .logo {
+        color: cyan;
+    }
+    
+    label {
+        margin: - 40px 0 0;
+        font-size: 26px;
+        line-height: 70px;
+        display: none;
+        width: 26px;
+        float: right;
+    }
+    #toggle {
         display: none;
     }
-    .nav a {
-        display: block;
-        border-bottom: 1px solid black;
-        margin: 0;
+    
+    
+    
+    #toggle a{
+        margin: 15px;
+        color: #000;
+        text-decoration: none;
+        font-family: 'Didact Gothic', sans-serif;
     }
-    #toggle:checked + .nav {
-        display: block;
+    
+    
+    .banner{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to top, black, cyan);
     }
-
-
+    
+    .bio {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        height: 100vh;
+        font-family: 'Didact Gothic', sans-serif;
+    }
+    
+    .skills, .portfolio, .contact{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        height: 100vh;
+        font-family: 'Didact Gothic', sans-serif;
+        overflow: hidden;
+    }
+    
+    .contact{
+        position: relative;
+        bottom: 0;
+        text-align: center;
+        height: 10vh;
+    }
+    
+    /* text styling */
+    .text{
+        font-size: 24px;
+        width: 65%;
+        height: 80%;
+    }
+    
+    h1{
+        font-size: 50px;
+        font-family: 'Didact Gothic', sans-serif;
+        color: cyan;
+        padding-bottom: 20px;
+    }
+    
+    p{
+        overflow-wrap: break-word;
+        font-size: 24px;
+        line-height: 50px;
+    }
+    
+    /* section colors */
+    .bio, .portfolio{
+        background: black;
+        color: whitesmoke;
+    }
+    
+    .skills, .contact{
+        background: black;
+        color: whitesmoke;
+    }
+    
+    /* smooth scroll navigation */
+    html{
+        scroll-behavior:smooth;
+    }
+    
+    /* home */
     .image-cropper {
         overflow: hidden;
-        border-radius: 30%;
+        border-radius: 50%;
         text-align: center;
         filter: blur(0);
         position: absolute;
         top: 55%;
         left: 50%;
-        width: 100px;
-        height: 100px;
-        margin-top: -80px; /* Half the height */
-        margin-left: -80px; /* Half the width */
+        width: 400px;
+        height: 400px;
+        margin-top: -200px; /* Half the height */
+        margin-left: -200px; /* Half the width */
     }
     .profile-pic {
       display: inline;
       margin: 0 auto;
+      height: 105%;
+      width: auto;
       filter: blur(0px);
     }
-
     
-#banner-text {
-    font-size: 36px;
-    position: absolute;
-    color: #fefefe;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    #banner-text {
+        position: absolute;
+        color: whitesmoke;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-
-}
-
-
-
-
-
-a{
-    margin: 15px;
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Didact Gothic', sans-serif;
-}
-a:hover{
-    color: #000;
-    font-family: 'Didact Gothic', sans-serif;
-}
-
-.banner{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-}
-
-#austin{
-    position: relative;
-    filter: blur(8px);
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-}
-
-.bio, .skills, .portfolio, .contact{
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100%;
-    height: 100vh;
-    font-family: 'Didact Gothic', sans-serif;
-}
-
-.contact{
-    position: relative;
-    bottom: 0;
-    text-align: center;
-    height: 10vh;
-}
-/* text styling */
-.text{
-    font-size: 24px;
-    width: 65%;
-    height: 80%;
-}
-
-h1{
-    font-size: 50px;
-    font-family: 'Didact Gothic', sans-serif;
-}
-
-p{
-    overflow-wrap: break-word;
-    font-size: 24px;
-    line-height: 50px;
-}
-
-
-
-
-/* section colors */
-.bio, .portfolio{
-    background: #fefefe;
-    color: #262626;
-    background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
-}
-
-.skills, .contact{
-    background: #262626;
-    color: #fefefe;
-    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
-}
-
-
-
-
-/* smooth scroll navigation */
-html{
-    scroll-behavior:smooth;
-}
-
-
-
-
-/* home */
-.image-cropper {
-    overflow: hidden;
-    border-radius: 50%;
-    text-align: center;
-    filter: blur(0);
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    width: 400px;
-    height: 400px;
-    margin-top: -200px; /* Half the height */
-    margin-left: -200px; /* Half the width */
-}
-.profile-pic {
-  display: inline;
-  margin: 0 auto;
-  height: 105%;
-  width: auto;
-  filter: blur(0px);
-}
-
-#banner-text {
-    position: absolute;
-    color: #fefefe;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-
-
-/* portfolio gallery */
-.flexbox {
-    width: 100%;
-    display: inline-block;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    box-shadow: 0 40px 40px -40px rgba(0,0,0,.2);
-}
-  .container {
-    position: relative;
-    display: inline-block;
-    height: 330px;
+    
+    .webDev {
+        position: absolute;
+        text-align: center;
+        color: cyan;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
     }
-
-
-.image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    transition: all 2s;
-}
-
-.overlay {
-    position: absolute; 
-    bottom: 5%; 
-    transform: translate(0%, 50%);
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.5); /*Black see-through */
-    color: #f1f1f1; 
-    width: 100%;
-    transition: .5s ease;
-    opacity:0;
-    color: white;
-    font-size: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-  }
-  
-.container:hover .overlay {
-    opacity: 1;
-  } 
-
-
-/*contact */
-.contact-images {
-    display: inline-block;
-    height: 50px;
-    position: nowrap;
-}
-
-.contact-links {
-    margin: auto; 
-    bottom: 0;
-    align-items: center;
-}
-
-@media only screen and (max-width: 800px) {
-.contact-images {
-    height: 50px;
-    width: 20%;
+    
+    .skillWrapper {
+        position: relative;
+        margin-top: 10%;
     }
+    
+    .skillList {
+        width: 50%;
+        float: left;
+    }
+    
+    .skillGrid img {
+        width: 150px;   
+    }
+    
+    .skillGrid {
+        width: 50%; 
+        float: right;
+        min-width: 460px;
+    }
+    
+    @media only screen and (max-width: 1440px) {
+        .skillGrid {
+            display: none;
+        }
+    }
+    
+    /* portfolio gallery */
+    .flexbox {
+        width: 100%;
+        display: inline-block;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        box-shadow: 0 40px 40px -40px rgba(0,0,0,.2);
+        margin-top: 10%;
+    }
+      .container {
+        position: relative;
+        display: inline-block;
+        height: 330px;
+        }
+    
+    .image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: all 1s;
+    }
+    
+    .overlay {
+        position: absolute; 
+        bottom: 5%; 
+        transform: translate(0%, 50%);
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /*Black see-through */
+        color: #f1f1f1; 
+        width: 100%;
+        transition: .5s ease;
+        opacity:0;
+        color: white;
+        font-size: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+      }
+      
+    .container:hover .overlay {
+        opacity: 1;
+      } 
+    
+    /*contact */
+    .contact-links a {
+        display: inline;
+        bottom: 0;
+        align-items: center;
+        color: cyan;
+        text-decoration: none;
+    }
+    
+    .pupPics {
+        display:flex;
+        flex-wrap:wrap;
+        flex-direction:row;
+        width: 100%;
+        margin: 30px 0 30px 0;
+    }
+    
+    .pup {
+        flex: 0 25%;
+        width: 31%;
+        box-sizing:border-box;
+        margin: 4px;
+    }
+    
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body{
+        width: 100%;
+        Height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Didact Gothic', sans-serif;
+        min-width: 768px;
+    }
+    
+    .navbar{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: black;
+        width: 100%;
+        height: 70px;
+        z-index: 1;
+        font-family: 'Didact Gothic', sans-serif;
+        box-shadow: 0 20px 20px -20px cyan;
+    }
+    
+    .navItems{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        font-family: 'Didact Gothic', sans-serif;
+        margin: 0 30px 0 0;
+        max-width: 60%;
+        color: cyan;
+        font-size: 18px;
+    }
+    
+    .navItems a:hover {
+        border-bottom: 2px solid cyan;
+    }
+    
+    .logo{
+        display: flex;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-size: 35px;
+        font-family: 'Didact Gothic', sans-serif;
+        padding-right: 10px;
+    }
+    
+    .navbar a {
+        clear: right;
+        text-decoration: none;
+        margin: 0 10px;
+        color: whitesmoke;
+    }
+    
+    .navbar .logo {
+        color: cyan;
+    }
+    
+    label {
+        margin: - 40px 0 0;
+        font-size: 26px;
+        line-height: 70px;
+        display: none;
+        width: 26px;
+        float: right;
+    }
+    #toggle {
+        display: none;
+    }
+    
+    
+    
+    #toggle a{
+        margin: 15px;
+        color: #000;
+        text-decoration: none;
+        font-family: 'Didact Gothic', sans-serif;
+    }
+    
+    
+    .banner{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to top, black, cyan);
+    }
+    
+    .bio {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        height: 100vh;
+        font-family: 'Didact Gothic', sans-serif;
+    }
+    
+    .skills, .portfolio, .contact{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        height: 100vh;
+        font-family: 'Didact Gothic', sans-serif;
+        overflow: hidden;
+    }
+    
+    .contact{
+        position: relative;
+        bottom: 0;
+        text-align: center;
+        height: 20vh;
+    }
+    
+    /* text styling */
+    .text{
+        font-size: 24px;
+        width: 65%;
+        height: 80%;
+    }
+    
+    h1{
+        font-size: 50px;
+        font-family: 'Didact Gothic', sans-serif;
+        color: cyan;
+        padding-bottom: 20px;
+    }
+    
+    p{
+        overflow-wrap: break-word;
+        font-size: 24px;
+        line-height: 50px;
+    }
+    
+    /* section colors */
+    .bio, .portfolio{
+        background: black;
+        color: whitesmoke;
+    }
+    
+    .skills, .contact{
+        background: black;
+        color: whitesmoke;
+    }
+    
+    /* smooth scroll navigation */
+    html{
+        scroll-behavior:smooth;
+    }
+    
+    /* home */
+    .image-cropper {
+        overflow: hidden;
+        border-radius: 50%;
+        text-align: center;
+        filter: blur(0);
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        width: 400px;
+        height: 400px;
+        margin-top: -200px; /* Half the height */
+        margin-left: -200px; /* Half the width */
+    }
+    .profile-pic {
+      display: inline;
+      margin: 0 auto;
+      height: 105%;
+      width: auto;
+      filter: blur(0px);
+    }
+    
+    #banner-text {
+        position: absolute;
+        color: whitesmoke;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .webDev {
+        position: absolute;
+        text-align: center;
+        color: cyan;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+    }
+    
+    .skillWrapper {
+        position: relative;
+        margin-top: 10%;
+    }
+    
+    .skillList {
+        width: 50%;
+        float: left;
+    }
+    
+    .skillGrid img {
+        width: 150px;   
+    }
+    
+    .skillGrid {
+        display: none;
+    }
+    
+    /* portfolio gallery */
+    .flexbox {
+        width: 100%;
+        display: inline-block;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        box-shadow: 0 40px 40px -40px rgba(0,0,0,.2);
+        margin-top: 10%;
+    }
+      .container {
+        position: relative;
+        display: inline-block;
+        height: 330px;
+        }
+    
+    .image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: all 1s;
+    }
+    
+    .overlay {
+        position: absolute; 
+        bottom: 5%; 
+        transform: translate(0%, 50%);
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /*Black see-through */
+        color: #f1f1f1; 
+        width: 100%;
+        transition: .5s ease;
+        opacity:0;
+        color: white;
+        font-size: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+      }
+      
+    .container:hover .overlay {
+        opacity: 1;
+      } 
+    
+    /*contact */
+    .contact-links a {
+        display: inline;
+        bottom: 0;
+        align-items: center;
+        color: cyan;
+        text-decoration: none;
+    }
+    
+    .pupPics {
+        display:flex;
+        flex-wrap:wrap;
+        flex-direction:row;
+        width: 100%;
+        margin: 30px 0 30px 0;
+    }
+    
+    .pup {
+        flex: 0 25%;
+        width: 31%;
+        box-sizing:border-box;
+        margin: 4px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 767px) {
+    body{
+        width: 100%;
+        Height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Didact Gothic', sans-serif;
+    }
+    
+    .navbar{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: black;
+        width: 100%;
+        height: 70px;
+        z-index: 1;
+        font-family: 'Didact Gothic', sans-serif;
+        box-shadow: 0 20px 20px -20px cyan;
+    }
+    
+    .navItems{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        font-family: 'Didact Gothic', sans-serif;
+        margin: 0 30px 0 0;
+        max-width: 60%;
+        color: cyan;
+        font-size: 18px;
+    }
+    
+    .navItems a:hover {
+        border-bottom: 2px solid cyan;
+    }
+    
+    .logo{
+        display: flex;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-size: 35px;
+        font-family: 'Didact Gothic', sans-serif;
+        padding-right: 10px;
+    }
+    
+    
+    .navbar a {
+        clear: right;
+        text-decoration: none;
+        margin: 0 10px;
+        color: whitesmoke;
+    }
+    
+    .navbar .logo {
+        color: cyan;
+    }
+    
+    label {
+        margin: - 40px 0 0;
+        font-size: 26px;
+        line-height: 70px;
+        display: none;
+        width: 26px;
+        float: right;
+    }
+    #toggle {
+        display: none;
+    }
+    
+    #toggle a{
+        margin: 15px;
+        color: #000;
+        text-decoration: none;
+        font-family: 'Didact Gothic', sans-serif;
+    }
+    
+    .banner{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to top, black, cyan);
+    }
+    
+    .bio {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        height: 100vh;
+        font-family: 'Didact Gothic', sans-serif;
+    }
+    
+    .skills, .portfolio, .contact{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        height: 100vh;
+        font-family: 'Didact Gothic', sans-serif;
+    }
+    
+    .contact{
+        position: relative;
+        bottom: 0;
+        text-align: center;
+        height: 20vh;
+    }
+    
+    /* text styling */
+    .text{
+        font-size: 24px;
+        width: 65%;
+        height: 80%;
+    }
+    
+    h1{
+        font-size: 50px;
+        font-family: 'Didact Gothic', sans-serif;
+        color: cyan;
+        padding-bottom: 20px;
+    }
+    
+    p{
+        overflow-wrap: break-word;
+        font-size: 24px;
+        line-height: 50px;
+    }
+    
+    
+    
+    
+    /* section colors */
+    .bio, .portfolio{
+        background: black;
+        color: whitesmoke;
+    }
+    
+    .skills, .contact{
+        background: black;
+        color: whitesmoke;
+    }
+    
+    
+    
+    
+    /* smooth scroll navigation */
+    html{
+        scroll-behavior:smooth;
+    }
+    
+    
+    
+    
+    /* home */
+    .image-cropper {
+        overflow: hidden;
+        border-radius: 50%;
+        text-align: center;
+        filter: blur(0);
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        width: 250px;
+        height: 250px;
+        margin-top: -125px; /* Half the height */
+        margin-left: -125px; /* Half the width */
+    }
+    .profile-pic {
+      display: inline;
+      margin: 0 auto;
+      height: 105%;
+      width: auto;
+      filter: blur(0px);
+    }
+    
+    #banner-text {
+        position: absolute;
+        color: #fefefe;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 36px;
+    }
+    
+    .webDev {
+        position: absolute;
+        text-align: center;
+        color: cyan;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    
+    .skillWrapper {
+        position: relative;
+        margin-top: 10%;
+    }
+    
+    .skillList {
+        width: 50%;
+        float: left;
+    }
+    
+    .skillGrid img {
+        width: 150px;   
+    }
+    
+    .skillGrid {
+        width: 50%; 
+        float: right;
+        min-width: 460px;
+    }
+    
+    @media only screen and (max-width: 1440px) {
+        .skillGrid {
+            display: none;
+        }
+    }
+    
+    /* portfolio gallery */
+    .flexbox {
+        width: 100%;
+        display: inline-block;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        box-shadow: 0 40px 40px -40px rgba(0,0,0,.2);
+    }
+      .container {
+        position: relative;
+        display: inline-block;
+        height: 330px;
+        }
+    
+    .image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: all 2s;
+    }
+    
+    .overlay {
+        position: absolute; 
+        bottom: 5%; 
+        transform: translate(0%, 50%);
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /*Black see-through */
+        color: #f1f1f1; 
+        width: 100%;
+        transition: .5s ease;
+        opacity:0;
+        color: white;
+        font-size: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+      }
+      
+    .container:hover .overlay {
+        opacity: 1;
+      } 
+    
+    
+    
+    
+    
+    /*contact */
+    .contact-links a {
+        display: inline;
+        bottom: 0;
+        align-items: center;
+        color: cyan;
+        text-decoration: none;
+    }
+    
+    .pupPics {
+        display:flex;
+        flex-wrap:wrap;
+        flex-direction:row;
+        width: 100%;
+        margin: 30px 0 30px 0;
+    }
+    
+    .pup {
+        flex: 0 25%;
+        width: 31%;
+        box-sizing:border-box;
+        margin: 4px;
+    }
+    
 }
